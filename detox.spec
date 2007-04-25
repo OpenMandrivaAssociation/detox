@@ -1,6 +1,6 @@
 %define	name	detox
 %define	version	1.1.1
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 %define summary A console utility to clean up filenames
 %define group	File tools
 
@@ -14,7 +14,7 @@ Group:		%{group}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	BSD-like
 
-Buildrequires: bison
+Buildrequires: bison flex
 
 %description
 The detox utility renames files to make them easier to work with. It
