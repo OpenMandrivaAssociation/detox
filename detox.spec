@@ -1,6 +1,6 @@
 %define	name	detox
 %define	version	1.1.1
-%define	release	%mkrel 4
+%define	release	%mkrel 6
 %define summary A console utility to clean up filenames
 %define group	File tools
 
