@@ -1,20 +1,14 @@
-%define	name	detox
-%define	version	1.1.1
-%define	release	%mkrel 6
-%define summary A console utility to clean up filenames
-%define group	File tools
-
-Name:		%{name} 
-Summary:	%{summary}
-Version:	%{version} 
-Release:	%{release} 
-Source0:	%{name}-%{version}.tar.bz2
+Name:		detox
+Summary:	A console utility to clean up filenames
+Version:	1.2.0
+Release:	%{mkrel 1} 
+Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 URL:		http://detox.sourceforge.net
-Group:		%{group}
+Group:		File tools
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	BSD-like
-
-Buildrequires: bison flex
+Buildrequires:	bison
+Buildrequires:	flex
 
 %description
 The detox utility renames files to make them easier to work with. It
@@ -26,23 +20,24 @@ characters encoded in UTF-8, and CGI escaped characters.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
 # Make sure our config is not +x
-chmod a-x $RPM_BUILD_ROOT%{_sysconfdir}/*
+chmod a-x %{buildroot}%{_sysconfdir}/*
 
 %clean 
-rm -rf $RPM_BUILD_ROOT 
+rm -rf %{buildroot} 
 
 %files 
 %defattr(-,root,root)
 %doc CHANGES README
 %{_datadir}/%{name}/
 %{_bindir}/%{name}
+%{_bindir}/inline-%{name}
 %{_mandir}/man?/*
-%config(noreplace) %_sysconfdir/*
+%config(noreplace) %{_sysconfdir}/*
 
