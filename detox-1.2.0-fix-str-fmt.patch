@@ -1,0 +1,33 @@
+diff -uNr detox-1.2.0.ori/parse_options_getopt.c detox-1.2.0/parse_options_getopt.c
+--- detox-1.2.0.ori/parse_options_getopt.c	2009-05-18 02:45:41.000000000 +0200
++++ detox-1.2.0/parse_options_getopt.c	2009-05-18 02:51:27.000000000 +0200
+@@ -98,9 +98,9 @@
+ #endif
+ 		switch (optcode) {
+ 			case 'h':
+-				printf(usage_message);
++				printf("%s", usage_message);
+ 				printf("\n");
+-				printf(help_message);
++				printf("%s", help_message);
+ 				exit(EXIT_SUCCESS);
+ 
+ 			case 'f':
+@@ -138,7 +138,7 @@
+ 				exit(EXIT_SUCCESS);
+ 
+ 			case '?':
+-				printf(usage_message);
++				printf("%s", usage_message);
+ 				exit(EXIT_SUCCESS);
+ 
+ 			case 0:
+@@ -195,7 +195,7 @@
+ 	}
+ 	else {
+ #ifndef INLINE_MODE
+-		printf(usage_message);
++		printf("%s", usage_message);
+ 		exit(EXIT_FAILURE);
+ #endif
+ 	}
