@@ -43,3 +43,37 @@ rm -rf %{buildroot}
 %{_mandir}/man?/*
 %config(noreplace) %{_sysconfdir}/*
 
+
+
+%changelog
+* Mon May 18 2009 Jérôme Brenier <incubusss@mandriva.org> 1.2.0-2mdv2010.0
++ Revision: 376817
+- add a patch to fix str fmt
+
+* Wed Oct 01 2008 Adam Williamson <awilliamson@mandriva.org> 1.2.0-1mdv2009.0
++ Revision: 290280
+- minor spec cleanups
+- new version 1.2.0 (fixes large file support, #44313)
+
+* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 1.1.1-6mdv2009.0
++ Revision: 240602
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Apr 25 2007 Eskild Hustvedt <eskild@mandriva.org> 1.1.1-4mdv2008.0
++ Revision: 18184
+- Fix buildrequires and yearly rebuild
+
+
+* Fri Nov 04 2005 Nicolas L�cureuil <neoclust@mandriva.org> 1.1.1-3mdk
+- Fix BuildRequires
+
+* Sat Apr 02 2005 Eskild Hustvedt <eskild@mandrake.org> 1.1.1-2mdk
+- %%mkrel
+
+* Sun Mar 13 2005 Eskild Hustvedt <eskild@mandrake.org> 1.1.1-1mdk
+- Initial Mandrakelinux package
+
