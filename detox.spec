@@ -4,7 +4,7 @@ Version:	1.2.0
 Release:	3
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-1.2.0-fix-str-fmt.patch
-URL:		http://detox.sourceforge.net
+URL:		https://detox.sourceforge.net
 Group:		File tools
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	BSD-like
